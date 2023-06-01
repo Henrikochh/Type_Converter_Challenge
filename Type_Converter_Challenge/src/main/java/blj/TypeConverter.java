@@ -98,10 +98,27 @@ public class TypeConverter {
    * @author <todo: Name of author>
    */
    public Set<Character> StringToCharSet(String toConvert){
+     Set<Character> StringToCharacterSet = new HashSet<>();
 
+     for (int i = 0; i < toConvert.length(); i++) {
+       char c = toConvert.charAt(i);
 
-    return new HashSet<Character>();
+       if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {
+         if (i > 1 && i < toConvert.length() - 2 && c == '-') {
+           throw new IllegalArgumentException("Invalid position for hyphen (-)");
+         }
+
+         if (StringToCharacterSet.contains(c)) {
+           throw new IllegalArgumentException("Duplicate character: " + c);
+         }
+
+         StringToCharacterSet.add(c);
+       } else {
+         throw new IllegalArgumentException("Invalid character: " + c);
+       }
+     }
+
+     return StringToCharacterSet;
   }
-
 
 }
