@@ -1,4 +1,4 @@
-package org;
+package blj;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -23,7 +23,6 @@ public class TypeConverter {
       System.out.println("Thats one");
     }
     short result = Short.parseShort(toConvert);
-    // todo implement
     return result;
   }
 
@@ -94,11 +93,10 @@ public class TypeConverter {
    *
    * @author <todo: Name of author>
    */
- /* public Set<char> StringToCharSet(String toConvert){
-    // todo implement
-    return new HashSet<char>();
+   public Set<Character> StringToCharSet(String toConvert){
+
+    return new HashSet<Character>();
   }
 
-  */
 
 }
