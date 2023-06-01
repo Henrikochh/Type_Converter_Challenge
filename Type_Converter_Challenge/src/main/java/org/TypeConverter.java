@@ -19,8 +19,12 @@ public class TypeConverter {
    * @author <todo: Name of author>
    */
   public short convertStringToShort(String toConvert) throws IllegalArgumentException{
+    if(toConvert.contains("'") || toConvert.contains("_")){
+      System.out.println("Thats one");
+    }
+    short result = Short.parseShort(toConvert);
     // todo implement
-    return 0;
+    return result;
   }
 
   /**
@@ -90,9 +94,11 @@ public class TypeConverter {
    *
    * @author <todo: Name of author>
    */
-  public Set<char> StringToCharSet(String toConvert){
+ /* public Set<char> StringToCharSet(String toConvert){
     // todo implement
     return new HashSet<char>();
   }
+
+  */
 
 }
