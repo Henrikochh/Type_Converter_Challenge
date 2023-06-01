@@ -18,7 +18,7 @@ public class TypeConverter {
    *
    * @author <todo: Name of author>
    */
-  public static short convertStringToShort(String toConvert) throws IllegalArgumentException{
+  public short convertStringToShort(String toConvert) throws IllegalArgumentException{
     // todo implement
     return 0;
   }
@@ -37,7 +37,7 @@ public class TypeConverter {
    *
    * @author <todo: Name of author>
    */
-  public static double convertStringToDouble(String toConvert) throws IllegalArgumentException{
+  public double convertStringToDouble(String toConvert) throws IllegalArgumentException{
     // todo implelment
     return 0;
   }
@@ -55,7 +55,7 @@ public class TypeConverter {
    *
    * @author <todo: Name of author>
    */
-  public static Long convertStringToLong(String toConvert) throws IllegalArgumentException{
+  public Long convertStringToLong(String toConvert) throws IllegalArgumentException{
     // todo implement
     return 0l;
   }
@@ -72,7 +72,7 @@ public class TypeConverter {
    *
    * @author <todo: Name of author>
    */
-  public static char[] StringToCharArray(String toConvert) throws IllegalArgumentException{
+  public char[] StringToCharArray(String toConvert) throws IllegalArgumentException{
     // todo implement
     return new char[]{};
   }
@@ -90,7 +90,7 @@ public class TypeConverter {
    *
    * @author <todo: Name of author>
    */
-  public static Set<char> StringToCharSet(String toConvert){
+  public Set<char> StringToCharSet(String toConvert){
     // todo implement
     return new HashSet<char>();
   }
