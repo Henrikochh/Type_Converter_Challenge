@@ -4,18 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e561afb9-eb92-4655-802d-f688c1ee3072" name="Changes" comment="update 1">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="e561afb9-eb92-4655-802d-f688c1ee3072" name="Changes" comment="update 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/TypeConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/TypeConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TypeConverterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TypeConverterTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="ComposerSettings">
-    <execution />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -46,7 +43,6 @@
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Users/Henri Koch/Documents/GitHub/Type_Converter_Challenge/Type_Converter_Challenge/src/main/java/org",
-    "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
@@ -84,12 +80,20 @@
       <option name="project" value="LOCAL" />
       <updated>1685610240840</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update 2">
+      <created>1685611149577</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1685611149577</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="creating the gradle project" />
     <MESSAGE value="update 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="update 1" />
+    <MESSAGE value="update 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="update 2" />
   </component>
 </project>

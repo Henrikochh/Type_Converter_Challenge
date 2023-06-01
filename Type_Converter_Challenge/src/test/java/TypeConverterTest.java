@@ -1,7 +1,4 @@
-import ch.noseryoung.main.SideCreatorService;
-import ch.noseryoung.main.Triangle;
-import ch.noseryoung.main.TriangleManager;
-import ch.noseryoung.main.TriangleValidator;
+
 import org.TypeConverter;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -9,16 +6,32 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TypeConverterTest {
     @BeforeEach
+    void init(){
 
+    }
     @Test
     public void convertStringToShortTest(){
         TypeConverter typeConverter = new TypeConverter();
         String s = "hsjgfb";
-        assertEquals (Short.class, typeConverter.convertStringToShort(s));
+        try {
+
+        }catch(){
+
+        }
+        short s1 = Short.parseShort("hsjgfb");
+        assertEquals (s1, typeConverter.convertStringToShort(s));
     }
-
-    public void convertStringToShort(){
-
+    @Test
+    public void convertStringToDoubleTest(){
+        TypeConverter typeConverter = new TypeConverter();
+        String s = "10.4";
+        assertEquals(Double.class, typeConverter.convertStringToDouble(s));
+        assertequals
     }
-
+    @Test
+    public void convertStringToLongTest(){
+        TypeConverter typeConverter = new TypeConverter();
+        String s = "10.4";
+        assertEquals(Long.class, typeConverter.convertStringToLong(s));
+    }
 }

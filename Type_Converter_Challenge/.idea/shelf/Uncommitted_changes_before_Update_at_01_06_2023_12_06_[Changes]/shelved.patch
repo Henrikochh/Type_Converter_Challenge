@@ -1,0 +1,90 @@
+Index: src/test/java/TypeConverterTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import ch.noseryoung.main.SideCreatorService;\r\nimport ch.noseryoung.main.Triangle;\r\nimport ch.noseryoung.main.TriangleManager;\r\nimport ch.noseryoung.main.TriangleValidator;\r\nimport org.TypeConverter;\r\nimport org.junit.jupiter.api.BeforeEach;\r\nimport org.junit.jupiter.api.Test;\r\n\r\nimport static org.junit.jupiter.api.Assertions.assertEquals;\r\npublic class TypeConverterTest {\r\n    @BeforeEach\r\n\r\n    @Test\r\n    public void convertStringToShortTest(){\r\n        TypeConverter typeConverter = new TypeConverter();\r\n        String s = \"hsjgfb\";\r\n        assertEquals (Short.class, typeConverter.convertStringToShort(s));\r\n    }\r\n\r\n    public void convertStringToShort(){\r\n\r\n    }\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/TypeConverterTest.java b/src/test/java/TypeConverterTest.java
+--- a/src/test/java/TypeConverterTest.java	(revision 65e0a0a9fe4dfe413c3366feadb357218717e13c)
++++ b/src/test/java/TypeConverterTest.java	(date 1685613657230)
+@@ -9,16 +9,27 @@
+ import static org.junit.jupiter.api.Assertions.assertEquals;
+ public class TypeConverterTest {
+     @BeforeEach
++    void init(){
+ 
++    }
+     @Test
+     public void convertStringToShortTest(){
+         TypeConverter typeConverter = new TypeConverter();
+         String s = "hsjgfb";
+-        assertEquals (Short.class, typeConverter.convertStringToShort(s));
++        short s1 = Short.parseShort("hsjgfb");
++        assertEquals (s1, typeConverter.convertStringToShort(s));
+     }
+-
+-    public void convertStringToShort(){
+-
++    @Test
++    public void convertStringToDoubleTest(){
++        TypeConverter typeConverter = new TypeConverter();
++        String s = "10.4";
++        assertEquals(Double.class, typeConverter.convertStringToDouble(s));
++        assertequals
+     }
+-
++    @Test
++    public void convertStringToLongTest(){
++        TypeConverter typeConverter = new TypeConverter();
++        String s = "10.4";
++        assertEquals(Long.class, typeConverter.convertStringToLong(s));
++    }
+ }
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"e561afb9-eb92-4655-802d-f688c1ee3072\" name=\"Changes\" comment=\"update 2\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/TypeConverter.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/TypeConverter.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/TypeConverterTest.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/TypeConverterTest.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ExternalProjectsData\">\r\n    <projectState path=\"$PROJECT_DIR$\">\r\n      <ProjectState />\r\n    </projectState>\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$/..\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2Qb4qoBA7YJKstz9DxLoGreC4dK\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"ASKED_SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"SONARLINT_PRECOMMIT_ANALYSIS\": \"true\",\r\n    \"git-widget-placeholder\": \"main\",\r\n    \"last_opened_file_path\": \"C:/Users/Henri Koch/Documents/GitHub/Type_Converter_Challenge/Type_Converter_Challenge/src/main/java/org\",\r\n    \"project.structure.last.edited\": \"Modules\",\r\n    \"project.structure.proportion\": \"0.15\",\r\n    \"project.structure.side.proportion\": \"0.2\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Henri Koch\\Documents\\GitHub\\Type_Converter_Challenge\\Type_Converter_Challenge\\src\\main\\java\\org\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Henri Koch\\Documents\\GitHub\\Type_Converter_Challenge\\Type_Converter_Challenge\\src\\Test\\java\" />\r\n      <recent name=\"C:\\Users\\Henri Koch\\Documents\\GitHub\\Type_Converter_Challenge\\Type_Converter_Challenge\\src\\main\\java\\org\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"e561afb9-eb92-4655-802d-f688c1ee3072\" name=\"Changes\" comment=\"\" />\r\n      <created>1685609142623</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1685609142623</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"creating the gradle project\">\r\n      <created>1685609310787</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1685609310787</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"update 1\">\r\n      <created>1685610240840</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1685610240840</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"update 2\">\r\n      <created>1685611149577</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1685611149577</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"4\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"creating the gradle project\" />\r\n    <MESSAGE value=\"update 1\" />\r\n    <MESSAGE value=\"update 2\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"update 2\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 65e0a0a9fe4dfe413c3366feadb357218717e13c)
++++ b/.idea/workspace.xml	(date 1685613657764)
+@@ -4,9 +4,8 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="e561afb9-eb92-4655-802d-f688c1ee3072" name="Changes" comment="update 2">
++    <list default="true" id="e561afb9-eb92-4655-802d-f688c1ee3072" name="Changes" comment="update 3">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/org/TypeConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/TypeConverter.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/test/java/TypeConverterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TypeConverterTest.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -87,13 +86,21 @@
+       <option name="project" value="LOCAL" />
+       <updated>1685611149577</updated>
+     </task>
+-    <option name="localTasksCounter" value="4" />
++    <task id="LOCAL-00004" summary="update 3">
++      <created>1685612167456</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1685612167456</updated>
++    </task>
++    <option name="localTasksCounter" value="5" />
+     <servers />
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="creating the gradle project" />
+     <MESSAGE value="update 1" />
+     <MESSAGE value="update 2" />
+-    <option name="LAST_COMMIT_MESSAGE" value="update 2" />
++    <MESSAGE value="update 3" />
++    <option name="LAST_COMMIT_MESSAGE" value="update 3" />
+   </component>
+ </project>
+\ No newline at end of file
