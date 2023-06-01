@@ -14,8 +14,8 @@ public class TypeConverterTest {
     @Test
     public void convertStringToShortTest(){
         TypeConverter typeConverter = new TypeConverter();
-        String s = "1000";
-        short s1 = Short.parseShort("1000");
+        String s = "-10'00";
+        short s1 = Short.parseShort("-1000");
         try {
             short shortString = typeConverter.convertStringToShort(s);
             assertEquals (s1, shortString);

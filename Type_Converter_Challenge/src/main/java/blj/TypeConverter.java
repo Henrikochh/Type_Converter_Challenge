@@ -1,5 +1,6 @@
 package blj;
 
+import java.beans.PropertyEditorSupport;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -19,11 +20,10 @@ public class TypeConverter {
    * @author <todo: Name of author>
    */
   public short convertStringToShort(String toConvert) throws IllegalArgumentException{
-    if(toConvert.contains("'") || toConvert.contains("_")){
-      System.out.println("Thats one");
-    }
-    short result = Short.parseShort(toConvert);
-    return result;
+    toConvert = toConvert.replaceAll("'", "");
+    toConvert = toConvert.replaceAll("_", "");
+
+    return Short.parseShort(toConvert);
   }
 
   /**
@@ -41,8 +41,10 @@ public class TypeConverter {
    * @author <todo: Name of author>
    */
   public double convertStringToDouble(String toConvert) throws IllegalArgumentException{
-    // todo implelment
-    return 0;
+    toConvert = toConvert.replaceAll("'", "");
+    toConvert = toConvert.replaceAll("_", "");
+
+    return Double.parseDouble(toConvert);
   }
 
   /**
@@ -59,8 +61,10 @@ public class TypeConverter {
    * @author <todo: Name of author>
    */
   public Long convertStringToLong(String toConvert) throws IllegalArgumentException{
-    // todo implement
-    return 0l;
+    toConvert = toConvert.replaceAll("'", "");
+    toConvert = toConvert.replaceAll("_", "");
+
+    return Long.parseLong(toConvert);
   }
 
   /**
@@ -94,6 +98,7 @@ public class TypeConverter {
    * @author <todo: Name of author>
    */
    public Set<Character> StringToCharSet(String toConvert){
+
 
     return new HashSet<Character>();
   }
