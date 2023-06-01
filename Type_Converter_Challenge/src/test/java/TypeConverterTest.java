@@ -12,26 +12,37 @@ public class TypeConverterTest {
     @Test
     public void convertStringToShortTest(){
         TypeConverter typeConverter = new TypeConverter();
-        String s = "hsjgfb";
+        String s = "1000";
+        short s1 = Short.parseShort("1000");
         try {
-
+            short shortString = typeConverter.convertStringToShort(s);
+            assertEquals (s1, shortString);
         }catch(Exception e){
-
+            System.out.println(e.getMessage());
         }
-        short s1 = Short.parseShort("hsjgfb");
-        assertEquals (s1, typeConverter.convertStringToShort(s));
     }
     @Test
     public void convertStringToDoubleTest(){
         TypeConverter typeConverter = new TypeConverter();
-        String s = "10.4";
-        assertEquals(Double.class, typeConverter.convertStringToDouble(s));
-
+        String s = "109.46";
+        Double s1 = 109.46;
+        try {
+            Double doubleConverted = typeConverter.convertStringToDouble(s);
+            assertEquals(s1, doubleConverted);
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
     }
     @Test
     public void convertStringToLongTest(){
         TypeConverter typeConverter = new TypeConverter();
-        String s = "10.4";
-        assertEquals(Long.class, typeConverter.convertStringToLong(s));
+        String s = "1005";
+        Long s1 = 1005L;
+        try {
+            assertEquals(s1, typeConverter.convertStringToLong(s));
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+
     }
 }
