@@ -3,6 +3,8 @@ import org.TypeConverter;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.HashSet;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TypeConverterTest {
     @BeforeEach
@@ -40,6 +42,20 @@ public class TypeConverterTest {
         Long s1 = 1005L;
         try {
             assertEquals(s1, typeConverter.convertStringToLong(s));
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+
+    }
+    @Test
+    public void StringToCharSetTest(){
+        TypeConverter typeConverter = new TypeConverter();
+        String s = "10";
+        HashSet<String> hashSet = new HashSet<>();
+        hashSet.add("1");
+        hashSet.add("0");
+        try {
+            assertEquals(hashSet, typeConverter.StringToCharSet(s));
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
