@@ -15,7 +15,7 @@ public class TypeConverterTest {
         String s = "hsjgfb";
         try {
 
-        }catch(){
+        }catch(Exception e){
 
         }
         short s1 = Short.parseShort("hsjgfb");
@@ -26,7 +26,7 @@ public class TypeConverterTest {
         TypeConverter typeConverter = new TypeConverter();
         String s = "10.4";
         assertEquals(Double.class, typeConverter.convertStringToDouble(s));
-        assertequals
+
     }
     @Test
     public void convertStringToLongTest(){
