@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashSet;
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TypeConverterTest {
@@ -14,7 +15,7 @@ public class TypeConverterTest {
     @Test
     public void convertStringToShortTest(){
         TypeConverter typeConverter = new TypeConverter();
-        String s = "-10'00";
+        String s = "10'000";
         short s1 = Short.parseShort("-1000");
         try {
             short shortString = typeConverter.convertStringToShort(s);
@@ -51,14 +52,23 @@ public class TypeConverterTest {
     public void StringToCharSetTest(){
         TypeConverter typeConverter = new TypeConverter();
         String s = "10";
-        HashSet<String> hashSet = new HashSet<>();
-        hashSet.add("1");
-        hashSet.add("0");
+        Set<Character> hashSet = new HashSet<>();
+        hashSet.add('1');
+        hashSet.add('0'
+        );
         try {
             assertEquals(hashSet, typeConverter.StringToCharSet(s));
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
 
+    }
+    @Test
+    public void StringToCharArrayTest(){
+        TypeConverter typeConverter = new TypeConverter();
+        String s = "HO";
+        char[] charArray = {'H', 'O'};
+        char[] resultArray = typeConverter.StringToCharArray(s);
+        assertEquals(charArray, resultArray);
     }
 }

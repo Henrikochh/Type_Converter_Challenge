@@ -1,6 +1,5 @@
 package blj;
 
-import java.beans.PropertyEditorSupport;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -80,8 +79,21 @@ public class TypeConverter {
    * @author <todo: Name of author>
    */
   public char[] StringToCharArray(String toConvert) throws IllegalArgumentException{
-    // todo implement
-    return new char[]{};
+
+    String filteredString = toConvert.replaceAll("[^a-zA-Z-]", "");
+
+    String singleHyphenString = filteredString.replaceAll("-+", "-");
+
+    String[] words = singleHyphenString.split("-");
+
+    StringBuilder convertedString = new StringBuilder();
+    for (String word : words) {
+      convertedString.append(word);
+    }
+
+    char[] charArray = convertedString.toString().toCharArray();
+
+    return charArray;
   }
 
   /**
